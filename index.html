@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge">
+    <title>RegExp Testing Tool | 正则表达式测试工具</title>
+    <link rel="stylesheet" href="ez.css">
+    <style type="text/css">
+    .compatibilityInfo {
+        display: none;
+    }
+    </style>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="ie.css">
+    <![endif]-->
+</head>
+
+<body>
+    <div id="main" class='main'>
+        <div class="compatibilityInfo tooLowInfo">
+            <div class="tooLowInfoInner">
+                <h1>噢？！出现问题了呢...</h1>
+                <p>该网页使用了一些旧版本浏览器无法实现的技术，<strong>需要 IE9.0 或更新的浏览器</strong>才能正确显示喔：）</p>
+                <p>浏览器推荐：</p>
+                <ul>
+                    <li><a href="http://www.google.cn/intl/zh-CN/chrome/browser/thankyou.html?platform=win&installdataindex=defaultbrowser" target="_blank">谷歌 Chrome</a></li>
+                    <li><a href="http://www.firefox.com.cn/" target="_blank">火狐 Firefox</a></li>
+                    <li><a href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads" target="_blank">微软 Internet Explorer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="textBox" :class="{ hover: hover === 'textBox' }" @mouseenter="boxEnter('textBox')" @mouseleave="boxLeave('textBox')">
+                <pre id='textPre' v-html="textPre"></pre>
+                <textarea name="textBody" id="textBody" v-model="textInput" @input="inputText" :placeholder="textHolder" spellcheck="false"></textarea>
+            </div>
+            <div class="regBox">
+                <textarea name="regBody" id="regBody" v-model="regInput" @input="matchDebounce" :placeholder=" regHolder" spellcheck="false" :class="{ hover: hover === 'regBody' }" @mouseenter="boxEnter('regBody')" @mouseleave="boxLeave('regBody')"></textarea>
+                <div class="regFlags">
+                    <div class="regFlagsInner">
+                        <a href="javascript:;" id="regFlagG" class="regFlag" :class="{ active: isActive.regFlags.g }" @click="toggleFlag('g')" title="Global 全局">g</a>
+                        <a href="javascript:;" id="regFlagI" class="regFlag" :class="{ active: isActive.regFlags.i }" @click="toggleFlag('i')" title="Case-insensitive 不区分大小写">i</a>
+                        <a href="javascript:;" id="regFlagM" class="regFlag" :class="{ active: isActive.regFlags.m }" @click="toggleFlag('m')" title="Multi-line 多行">m</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="help">
+                <p>
+                    About <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">JavaScript Regular Expressions</a>
+                </p>
+                <p> 
+                    关于 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">JavaScript 正则表达式</a>
+                </p>
+            </div>
+            <div class="copyright">powered by Vue.js | <a target="_blank" href="http://www.eazyc.info">eazyc</a></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
+    <!-- <script type="text/javascript" src="./lodash.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.3.3/vue.min.js"></script>
+    <!-- <script type="text/javascript" src="./vue.min.js"></script> -->
+    <script type="text/javascript" src="./ez.js"></script>
+</body>
+
+</html>

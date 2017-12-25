@@ -1,0 +1,188 @@
+i, b, strong, em {
+    font-stretch: normal;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: normal;
+}
+strong {
+    font-weight: bold;
+}
+textarea, textarea:focus {
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+    font-family: consolas, monaco, courier, monospace;
+}
+p {
+    margin: .5rem 0;
+}
+a:link, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: #e44;
+}
+
+html, body {
+    margin: auto;
+    width: 100%;
+    height: 100%;    
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", SimHei, "WenQuanYi Micro Hei", sans-serif;
+    font-size: 16px;
+    background-color: #666;
+}
+.main {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    min-width: 640px;
+    width: 80%;
+    max-width: 1000px;
+    min-height: 100%;
+    margin: auto;
+    padding: 1.5rem 0 0 0;
+    border: 1px solid #222;
+    border-top: none;
+    border-bottom: none;
+    background-color: #ccc;
+}
+@media only screen and (max-width: 640px) {
+    .main {
+        min-width: 320px;
+        width: 100%;
+        border: none;
+    }
+}
+textarea, pre {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: consolas, monaco, courier, monospace;
+    display: block;
+    padding: .5rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+.regBox {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #333;
+    border-left: none;
+    border-right: none;
+}
+.regBox textarea {
+    height: 8rem;
+    border: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    resize: none;
+    border-bottom: 1px solid #ccc;
+}
+.regFlags {
+    padding: 1rem 0;
+    background-color: #eee;
+}
+.regFlagsInner {
+    margin: 0 auto;
+    min-width: 220px;
+    width: 50%;
+    max-width: 400px;
+    position: relative;
+    height: 3rem;
+}
+.regFlag, .regFlag:link, .regFlag:focus .regFlag:visited, .regFlag:hover  {
+    background-color: #ccc;
+    border-radius: 3rem;
+    box-sizing: border-box;
+    box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.4);
+    color: #999;
+    cursor: pointer;
+    display: block;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0 1px;
+    text-align: center;
+    user-select: none;
+    width: 3rem;
+    position: absolute;
+    top: 0;
+}
+#regFlagG {
+    left: 0;
+}
+#regFlagI {
+    left: 50%;
+    margin-left: -1.5rem;
+}
+#regFlagM {
+    right: 0;
+}
+.regFlag.active {
+    color: #fff;
+    background-color: #666;
+}
+.textBox {
+    position: relative;
+    text-align: left;
+    font-size: large;
+    height: 24rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+    border-top: 1px solid #333;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+.textBox pre, .textBox textarea {
+    height: auto;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    resize: none;
+    overflow: hidden;
+}
+.textBox pre {
+    color: transparent;
+    z-index: 1;
+}
+.textBox pre i {
+    background-color: #c9c9c9;
+}
+.textBox pre b {
+    background-color: #faa;
+}
+.textBox textarea {
+    background-color: transparent;
+    color: #000;
+    height: 200px;
+    z-index: 2;
+}
+.textBox.hover, #regBody.hover {
+    /*background-color: #ddd;*/
+    /*box-shadow: 0 0 1rem .5rem rgba(0,0,0,0.1) inset*/
+}
+.footer {
+    font-size: .8rem;
+    line-height: 1rem;
+    text-align: center;
+}
+.footer .help {
+    background-color: #444;
+    padding: 1rem 1rem;
+    /*border-bottom: 1px solid #333;*/
+    color: #ccc;
+}
+.footer .help a:hover {
+    color: #eee;
+}
+.footer .copyright {
+    color: #444;
+    padding: 1rem;
+    /*text-align: right;*/
+}
